@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msvalidate.01" content="738E236186FAB17ABFA026D359617356" />
+  <meta name="google-site-verification" content="nF_ypvPYS8Zkdom0PIt9Biklhvi-XAhaK5WLRHvVAlM" />
+  <title>This is seo testing</title>
+</head>
+<body>
+  <script>
+    class MyComponent extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+      }
+  
+      connectedCallback() {
+        let p = document.createElement('p');
+        p.innerHTML = 'Hello World, i am introducing new word here chikabadaboo <h1>This is chikabadaboo DOM content. It\'s projected into the chikabadaboo DOM.</h1><slot></slot>';
+        this.shadowRoot.appendChild(p);
+      }
+    }
+  
+    window.customElements.define('my-mikamasamoo', MyComponent);
+  </script>
+  
+  <my-mikamasamoo>
+    <h3>This is mikamasamoo coming from slot</h3>
+    <a href="https://www.linkedin.com/in/riteshrajput381?originalSubdomain=in" target="_blank"> mikamasamoo Profile</a>
+  </my-mikamasamoo>
+
+</body>
+</html>
