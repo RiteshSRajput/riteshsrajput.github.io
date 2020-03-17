@@ -17,7 +17,7 @@
   
       connectedCallback() {
         let p = document.createElement('p');
-        p.innerHTML = 'Hello World, i am introducing new word here chikabadaboo <slot></slot>';
+        p.innerHTML = 'Hello World, i am introducing new word here chikabadaboo <h1>This is chikabadaboo DOM content. It\'s projected into the chikabadaboo DOM.</h1><slot></slot>';
         this.shadowRoot.appendChild(p);
       }
     }
@@ -26,7 +26,7 @@
   </script>
   
   <my-chikabadaboo>
-    <h1>This is chikabadaboo DOM content. It's projected into the chikabadaboo DOM.</p>
+    <h3>This is chikabadaboo coming from slot</h1>
     <a href="https://www.linkedin.com/in/riteshrajput381?originalSubdomain=in" target="_blank"> chikabadaboo Profile</a>
   </my-chikabadaboo>
 
