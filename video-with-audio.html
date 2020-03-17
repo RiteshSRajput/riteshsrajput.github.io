@@ -4,17 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  
 </head>
 <body>
-  <video width="306" height="360" muted="" autoplay="" playsinline="">
+  <video id="myVideo" muted="" autoplay="" playsinline="">
     <source src="Transaction Animation.Lo-res_1080.mp4">
     Your browser does not support the video tag.
   </video>
 
-  <audio controls>
-    <source src="MastercardTransaction Sound-1.5s.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+  <div id="myAudio" style="display:none"></div>
+  <script>
+    var vid = document.getElementById("myVideo");
+    vid.onloadeddata = function() {
+      var aId = document.getElementById('myAudio');
+      setTimeout(() => { 
+        var audio = document.createElement("AUDIO")
+        aId.appendChild(audio);
+        audio.src = "MastercardTransaction Sound-1.5s.mp3"
+
+        document.body.addEventListener("mousemove", function () {
+          audio.play()
+        })
+      }, 1000);
+    };
+  </script>
+  
+  
+  
+  
   
 </body>
 </html>

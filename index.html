@@ -5,15 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="msvalidate.01" content="738E236186FAB17ABFA026D359617356" />
   <meta name="google-site-verification" content="nF_ypvPYS8Zkdom0PIt9Biklhvi-XAhaK5WLRHvVAlM" />
-  <title>Document</title>
+  <title>chikabadaboo</title>
 </head>
 <body>
-  <div class="dynamic"></div>
-  
-  <br>
-  <a href="./video-with-audio.html">Sonic Branch payment link</a> Plays the video and audio for all the browsers
   <script>
-    document.getElementsByClassName('dynamic')[0].innerHTML = 'This is sample domain site';
+    class MyComponent extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+      }
+  
+      connectedCallback() {
+        let p = document.createElement('p');
+        p.innerHTML = 'Hello World, i am introducing new word here chikabadaboo <slot></slot>';
+        this.shadowRoot.appendChild(p);
+      }
+    }
+  
+    window.customElements.define('my-chikabadaboo', MyComponent);
   </script>
+  
+  <my-chikabadaboo>
+    <h1>This is chikabadaboo DOM content. It's projected into the chikabadaboo DOM.</p>
+    <a href="https://www.linkedin.com/in/riteshrajput381?originalSubdomain=in" target="_blank"> chikabadaboo Profile</a>
+  </my-chikabadaboo>
+
 </body>
 </html>
